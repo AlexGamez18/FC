@@ -1,5 +1,4 @@
 function crearCorazones() {
-  const contenedor = document.querySelector('.corazones');
   const corazon = document.createElement('div');
   corazon.classList.add('corazon');
   corazon.style.left = Math.random() * 100 + 'vw';
