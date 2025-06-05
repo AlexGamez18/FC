@@ -15,39 +15,6 @@ body {
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
 
-#contador {
-  font-family: 'Playfair Display', serif;
-  font-size: 3.5rem;
-  text-align: center;
-  color: #7a2c2c;
-  background: linear-gradient(145deg, #fff0e6, #fce4ec);
-  padding: 40px 60px;
-  border-radius: 25px;
-  border: 3px solid #f8b3c3;
-  box-shadow: 0 0 20px rgba(248, 179, 195, 0.4), 0 0 8px rgba(248, 179, 195, 0.6);
-  animation: latido 1.5s infinite;
-  transition: all 0.4s ease-in-out;
-}
-
-.contenedor-contador {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-@keyframes latido {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-}
-
-
 #sorpresa {
   display: none;
   text-align: center;
