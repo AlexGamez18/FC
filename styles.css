@@ -1,0 +1,240 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fffaf0;
+  color: #333;
+  height: auto;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+
+#contador {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  text-align: center;
+  color: #7a2c2c;
+  background: linear-gradient(145deg, #fff0e6, #fce4ec);
+  padding: 40px 60px;
+  border-radius: 25px;
+  border: 3px solid #f8b3c3;
+  box-shadow: 0 0 20px rgba(248, 179, 195, 0.4), 0 0 8px rgba(248, 179, 195, 0.6);
+  animation: latido 1.5s infinite;
+  transition: all 0.4s ease-in-out;
+}
+
+.contenedor-contador {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+@keyframes latido {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+
+#sorpresa {
+  display: none;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.video-mensaje {
+  width: 90%;
+  max-width: 600px;
+  margin-top: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.contenido-principal {
+  margin-top: 30px;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #b56576;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #6d6875;
+}
+
+.globos {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.globo {
+  position: absolute;
+  bottom: -100px;
+  width: 30px;
+  height: 40px;
+  background: #fcd5ce;
+  border-radius: 50% 50% 45% 45%;
+  animation: subir var(--dur) linear infinite;
+  left: var(--left);
+  animation-delay: var(--delay);
+}
+
+@keyframes subir {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120vh) scale(1.2);
+    opacity: 0;
+  }
+}
+
+.titulo-cumple {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  color: #8a3e3e;
+  margin-bottom: 20px;
+  animation: fadeInDown 1s ease-out;
+}
+
+.mensaje-especial {
+  font-size: 1.2rem;
+  color: #5c2e2e;
+  background-color: #fff0f3;
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid #f5c6d6;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  max-width: 90%;
+  margin: 0 auto 30px auto;
+  animation: fadeIn 1.5s ease-out;
+}
+
+/* Animaciones suaves */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.corazones {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.corazon {
+  position: absolute;
+  top: -10px;
+  width: 20px;
+  height: 20px;
+  background: pink;
+  transform: rotate(45deg);
+  animation: caer 6s linear infinite;
+  border-radius: 0 0 50% 50%;
+  opacity: 0.8;
+}
+
+.corazon::before,
+.corazon::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: pink;
+  border-radius: 50%;
+}
+
+.corazon::before {
+  top: -10px;
+  left: 0;
+}
+
+.corazon::after {
+  left: -10px;
+  top: 0;
+}
+
+@keyframes caer {
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+
+#contenido {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 1.5s ease-in-out;
+}
+
+#contenido.mostrar {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.video-link-box a {
+  text-decoration: none;
+  background: #ffbebe;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  display: inline-block;
+  margin: 5px;
+}
+
+.video-link-box a:hover {
+  background: #ff8e8e;
+}
+
+
+
