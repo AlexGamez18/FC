@@ -5,7 +5,7 @@
 
   const mañana = new Date(ahoraCST);
   mañana.setDate(mañana.getDate() + 1);
-  mañana.setHours(-4, -40, 0, 0);
+  mañana.setHours(0, 0, 0, 0);
 
   const diferencia = mañana - ahoraCST;
 
